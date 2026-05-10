@@ -1,0 +1,8 @@
+﻿<RCC>
+	<qresource prefix="/data">
+		<file alias="config.json">config.json</file>
+		<file alias="questions.json">questions.json</file>
+		<file alias="dimensions.json">dimensions.json</file>
+		<file alias="types.json">types.json</file>
+	</qresource>
+</RCC>

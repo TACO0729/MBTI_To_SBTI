@@ -1,0 +1,56 @@
+#include "SBTI.h"
+
+#include <QDebug>
+#include <QMessageBox>
+
+SBTI::SBTI(QWidget* parent)
+    : QMainWindow(parent)
+{
+    ui.setupUi(this);
+
+    initEngineForTest();
+}
+
+SBTI::~SBTI()
+{
+}
+
+void SBTI::initEngineForTest()
+{
+    const bool ok = m_engine.loadFromFiles(
+        ":/data/config.json",
+        ":/data/questions.json",
+        ":/data/dimensions.json",
+        ":/data/types.json"
+    );
+
+    if (!ok) {
+        QMessageBox::critical(
+            this,
+            "数据加载失败",
+            "SBTI 数据文件加载失败。\n请检查 resources.qrc 和四个 JSON 文件。"
+        );
+        return;
+    }
+
+    m_engine.start();
+
+    qDebug() << "SBTI 数据加载成功";
+    qDebug() << "标题:" << m_engine.displayTitle();
+    qDebug() << "副标题:" << m_engine.displaySubtitle();
+    qDebug() << "作者:" << m_engine.displayAuthor();
+    qDebug() << "维度数量:" << m_engine.dimOrder().size();
+    qDebug() << "题目总数:" << m_engine.totalQuestions();
+
+    if (m_engine.totalQuestions() > 0) {
+        const SbtiQuestion q = m_engine.currentQuestion();
+
+        qDebug() << "当前题目ID:" << q.id;
+        qDebug() << "当前题目:" << q.text;
+        qDebug() << "选项数量:" << q.options.size();
+
+        for (const SbtiOption& opt : q.options) {
+            qDebug() << "选项:" << opt.label << "值:" << opt.value;
+        }
+    }
+}
