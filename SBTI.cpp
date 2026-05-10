@@ -7,5 +7,4 @@ SBTI::SBTI(QWidget *parent)
 }
 
 SBTI::~SBTI()
-{}
-
+{ }
