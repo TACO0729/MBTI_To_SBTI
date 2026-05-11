@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui version="4.0">
+	<class>QuizPage</class>
+	<widget class="QWidget" name="QuizPage">
+		<property name="geometry">
+			<rect>
+				<x>0</x>
+				<y>0</y>
+				<width>700</width>
+				<height>500</height>
+			</rect>
+		</property>
+		<property name="windowTitle">
+			<string>MBTI 测试</string>
+		</property>
+		<layout class="QVBoxLayout" name="verticalLayout">
+			<item>
+				<widget class="QLabel" name="labelQuestionNum">
+					<property name="font">
+						<font>
+							<pointsize>12</pointsize>
+							<bold>true</bold>
+						</font>
+					</property>
+					<property name="text">
+						<string>问题 1 / 32</string>
+					</property>
+					<property name="alignment">
+						<set>Qt::AlignCenter</set>
+					</property>
+				</widget>
+			</item>
+			<item>
+				<widget class="QProgressBar" name="progressBar">
+					<property name="value">
+						<number>0</number>
+					</property>
+				</widget>
+			</item>
+			<item>
+				<widget class="QLabel" name="labelProgress">
+					<property name="text">
+						<string>已回答: 0 / 32</string>
+					</property>
+					<property name="alignment">
+						<set>Qt::AlignCenter</set>
+					</property>
+				</widget>
+			</item>
+			<item>
+				<spacer name="verticalSpacer_2">
+					<property name="orientation">
+						<enum>Qt::Vertical</enum>
+					</property>
+				</spacer>
+			</item>
+			<item>
+				<widget class="QLabel" name="labelQuestionText">
+					<property name="font">
+						<font>
+							<pointsize>14</pointsize>
+						</font>
+					</property>
+					<property name="text">
+						<string>这里是问题文本...</string>
+					</property>
+					<property name="alignment">
+						<set>Qt::AlignCenter</set>
+					</property>
+					<property name="wordWrap">
+						<bool>true</bool>
+					</property>
+				</widget>
+			</item>
+			<item>
+				<spacer name="verticalSpacer">
+					<property name="orientation">
+						<enum>Qt::Vertical</enum>
+					</property>
+				</spacer>
+			</item>
+			<item>
+				<layout class="QVBoxLayout" name="optionsLayout">
+					<item>
+						<widget class="QRadioButton" name="radioA">
+							<property name="font">
+								<font>
+									<pointsize>12</pointsize>
+								</font>
+							</property>
+							<property name="text">
+								<string>A. 选项A</string>
+							</property>
+						</widget>
+					</item>
+					<item>
+						<widget class="QRadioButton" name="radioB">
+							<property name="font">
+								<font>
+									<pointsize>12</pointsize>
+								</font>
+							</property>
+							<property name="text">
+								<string>B. 选项B</string>
+							</property>
+						</widget>
+					</item>
+					<item>
+						<widget class="QRadioButton" name="radioNeutral">
+							<property name="font">
+								<font>
+									<pointsize>12</pointsize>
+								</font>
+							</property>
+							<property name="text">
+								<string>C. 两者差不多 / 难以选择</string>
+							</property>
+						</widget>
+					</item>
+				</layout>
+			</item>
+			<item>
+				<spacer name="verticalSpacer_3">
+					<property name="orientation">
+						<enum>Qt::Vertical</enum>
+					</property>
+				</spacer>
+			</item>
+			<item>
+				<layout class="QHBoxLayout" name="buttonLayout">
+					<item>
+						<widget class="QPushButton" name="btnPrev">
+							<property name="text">
+								<string>上一题</string>
+							</property>
+						</widget>
+					</item>
+					<item>
+						<spacer name="horizontalSpacer">
+							<property name="orientation">
+								<enum>Qt::Horizontal</enum>
+							</property>
+						</spacer>
+					</item>
+					<item>
+						<widget class="QPushButton" name="btnNext">
+							<property name="text">
+								<string>下一题</string>
+							</property>
+							<property name="enabled">
+								<bool>false</bool>
+							</property>
+						</widget>
+					</item>
+				</layout>
+			</item>
+		</layout>
+	</widget>
+	<resources/>
+	<connections/>
+</ui>

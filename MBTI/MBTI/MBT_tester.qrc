@@ -1,0 +1,21 @@
+<RCC>
+	<qresource prefix="/">
+		<file>questions.json</file>
+		<file>istj.png</file>
+		<file>isfj.png</file>
+		<file>infj.png</file>
+		<file>intj.png</file>
+		<file>istp.png</file>
+		<file>isfp.png</file>
+		<file>infp.png</file>
+		<file>intp.png</file>
+		<file>estp.png</file>
+		<file>esfp.png</file>
+		<file>enfp.png</file>
+		<file>entp.png</file>
+		<file>estj.png</file>
+		<file>esfj.png</file>
+		<file>enfj.png</file>
+		<file>entj.png</file>
+	</qresource>
+</RCC>

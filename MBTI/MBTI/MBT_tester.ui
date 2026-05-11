@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+	<class>MBT_tester</class>
+	<widget class="QMainWindow" name="MBT_tester">
+		<property name="geometry">
+			<rect>
+				<x>0</x>
+				<y>0</y>
+				<width>750</width>
+				<height>600</height>
+			</rect>
+		</property>
+		<property name="windowTitle">
+			<string>MBTI 人格测试</string>
+		</property>
+		<widget class="QWidget" name="centralwidget">
+			<layout class="QVBoxLayout" name="verticalLayout">
+				<item>
+					<widget class="QStackedWidget" name="stackedWidget">
+						<widget class="QWidget" name="welcomePage">
+							<layout class="QVBoxLayout" name="welcomeLayout">
+								<item>
+									<spacer name="verticalSpacer_2">
+										<property name="orientation">
+											<enum>Qt::Vertical</enum>
+										</property>
+									</spacer>
+								</item>
+								<item>
+									<widget class="QLabel" name="labelWelcome">
+										<property name="font">
+											<font>
+												<pointsize>24</pointsize>
+												<bold>true</bold>
+											</font>
+										</property>
+										<property name="text">
+											<string>MBTI 人格类型测试</string>
+										</property>
+										<property name="alignment">
+											<set>Qt::AlignCenter</set>
+										</property>
+									</widget>
+								</item>
+								<item>
+									<widget class="QLabel" name="labelSub">
+										<property name="font">
+											<font>
+												<pointsize>12</pointsize>
+											</font>
+										</property>
+										<property name="text">
+											<string>通过 32 道问题，发现你的性格类型</string>
+										</property>
+										<property name="alignment">
+											<set>Qt::AlignCenter</set>
+										</property>
+									</widget>
+								</item>
+								<item>
+									<spacer name="verticalSpacer">
+										<property name="orientation">
+											<enum>Qt::Vertical</enum>
+										</property>
+									</spacer>
+								</item>
+								<item>
+									<layout class="QHBoxLayout" name="horizontalLayout">
+										<item>
+											<spacer name="horizontalSpacer">
+												<property name="orientation">
+													<enum>Qt::Horizontal</enum>
+												</property>
+											</spacer>
+										</item>
+										<item>
+											<widget class="QPushButton" name="btnStart">
+												<property name="font">
+													<font>
+														<pointsize>14</pointsize>
+													</font>
+												</property>
+												<property name="text">
+													<string>开始测试</string>
+												</property>
+												<property name="minimumSize">
+													<size>
+														<width>150</width>
+														<height>50</height>
+													</size>
+												</property>
+											</widget>
+										</item>
+										<item>
+											<spacer name="horizontalSpacer_2">
+												<property name="orientation">
+													<enum>Qt::Horizontal</enum>
+												</property>
+											</spacer>
+										</item>
+									</layout>
+								</item>
+								<item>
+									<spacer name="verticalSpacer_3">
+										<property name="orientation">
+											<enum>Qt::Vertical</enum>
+										</property>
+									</spacer>
+								</item>
+							</layout>
+						</widget>
+					</widget>
+				</item>
+			</layout>
+		</widget>
+	</widget>
+	<resources/>
+	<connections/>
+</ui>
